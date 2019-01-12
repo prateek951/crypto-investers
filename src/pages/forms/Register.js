@@ -46,18 +46,18 @@ export default class Register extends Component {
           <input type="email" name="email" id="email"
           onChange={this.handleStringChange}
           value={user.email}
-          className={errors.email ? "form-control is-invalid" : "form-control"} />
+          className={errors.emailError ? "form-control is-invalid" : "form-control"} />
         </div>
-        <div className="invalid-feedback">{errors.email}</div>
+        <div className="invalid-feedback">{errors.emailError}</div>
         
         <div className="form-group">
             <label htmlFor="username">Username</label>
             <input type="text" name="username" id="username"
                 onChange={this.handleStringChange}
                 value={user.username}
-                className={errors.username ? "form-control is-invalid":"form-control"}
+                className={errors.usernameError ? "form-control is-invalid":"form-control"}
             />
-            <div className="invalid-feedback">{errors.username}</div>
+            <div className="invalid-feedback">{errors.usernameError}</div>
         </div>
         
         <div className="form-group">
@@ -65,9 +65,9 @@ export default class Register extends Component {
             <input type="password" name="password" id="password"
                 onChange={this.handleStringChange}
                 value={user.password}
-                className={errors.password ? "form-control is-invalid" : "form-control"}
+                className={errors.passwordError ? "form-control is-invalid" : "form-control"}
             />
-            <div className="invalid-feedback">{errors.passoword}</div>
+            <div className="invalid-feedback">{errors.passwordError}</div>
         </div>
 
         <button type="submit" className="btn btn-primary btn-block">
