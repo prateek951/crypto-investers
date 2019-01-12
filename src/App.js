@@ -4,7 +4,7 @@ import "./App.css";
 import CryptoProvider from "./CryptoProvider";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
-import Welcome from "./components/Welcome";
+import Settings from "./components/Settings";
 // import Register from "./pages/forms/Register";
 // import Login from "./pages/forms/Login";
 // import Dashboard from "./pages/Dashboard";
@@ -16,7 +16,7 @@ class App extends Component {
         <Layout>
           <CryptoProvider>
             <Navbar/>
-            <Welcome name="instillCrypto"/>
+            <Settings/>
           </CryptoProvider>
         </Layout>
       </div>
