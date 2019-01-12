@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import Validator from "validator";
 
 export default class Login extends Component {
@@ -34,7 +34,7 @@ export default class Login extends Component {
     return errors;
   };
   render() {
-      const { data, errors }  = this.state;
+      const { data:user, errors }  = this.state;
     return (
      <form onSubmit={this.handleLogin}>
             {errors.global && (
@@ -44,7 +44,7 @@ export default class Login extends Component {
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email"
                 onChange={this.handleStringChange}
-                value={data.email}
+                value={user.email}
                 className={errors.email ? "form-control is-invalid" : "form-control"}
             />
             <div className="invalid-feedback">{errors.email}</div>
@@ -53,7 +53,7 @@ export default class Login extends Component {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password"
                 onChange={this.handleStringChange}
-                value={data.password}
+                value={user.password}
                 className={errors.password ? "form-control is-invalid" : "form-control"}
             />
             <div className="invalid-feedback">{errors.password}</div>
