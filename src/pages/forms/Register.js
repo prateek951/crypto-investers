@@ -7,7 +7,8 @@ export default class Register extends Component {
     data: {
       email: "",
       username: "",
-      password: ""
+      password: "",
+      confirmPassword : ""
     },
     errors: {}
   };
@@ -33,6 +34,7 @@ export default class Register extends Component {
     if (!isEmail(data.email)) errors.emailError = "Invalid E-mail";
     if (!data.username) errors.usernameError = "Username cannot be blank";
     if (!data.password) errors.passwordError = "Password cannot be blank";
+    if(!data.confirmPassword) errors.confirmPasswordError = "Confirm Password cannot be blank";
     return errors;
   };
 
@@ -68,6 +70,16 @@ export default class Register extends Component {
                 className={errors.passwordError ? "form-control is-invalid" : "form-control"}
             />
             <div className="invalid-feedback">{errors.passwordError}</div>
+        </div>
+
+         <div className="form-group">
+            <label htmlFor="password">Confirm Password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword"
+                onChange={this.handleStringChange}
+                value={user.confirmPassword}
+                className={errors.confirmPasswordError ? "form-control is-invalid" : "form-control"}
+            />
+            <div className="invalid-feedback">{errors.confirmPasswordError}</div>
         </div>
 
         <button type="submit" className="btn btn-primary btn-block">
