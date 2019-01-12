@@ -45,18 +45,18 @@ export default class Login extends Component {
             <input type="email" name="email" id="email"
                 onChange={this.handleStringChange}
                 value={user.email}
-                className={errors.email ? "form-control is-invalid" : "form-control"}
+                className={errors.mailError ? "form-control is-invalid" : "form-control"}
             />
-            <div className="invalid-feedback">{errors.email}</div>
+            <div className="invalid-feedback">{errors.mailError}</div>
         </div> 
         <div className="form-group">
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password"
                 onChange={this.handleStringChange}
                 value={user.password}
-                className={errors.password ? "form-control is-invalid" : "form-control"}
+                className={errors.passError ? "form-control is-invalid" : "form-control"}
             />
-            <div className="invalid-feedback">{errors.password}</div>
+            <div className="invalid-feedback">{errors.passError}</div>
         </div>
         <button type="submit" className="btn btn-primary btn-block">
             Login
