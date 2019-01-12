@@ -113,7 +113,7 @@ export default class Register extends Component {
         </button>
 
           <small className="form-text text-center">
-            or <Link to="/auth/login">Login</Link> if you have an account
+            Already Registered? <Link to="/auth/login">Login</Link>
         </small>
         </div>
       </form>
