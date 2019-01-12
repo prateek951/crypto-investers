@@ -26,45 +26,59 @@ export default class Login extends Component {
       //no errors perfect reach out to server and login
       //axios call will go here
     }
+    this.setState({ errors: errors });
   };
   validate = ({ email, password }) => {
     const errors = {};
     if (!Validator.isEmail(email)) errors.mailError = "Invalid email";
-    if (!password) errors.passError = "Cannot be blank";
+    if (!password) errors.passError = "Password cannot be blank";
     return errors;
   };
   render() {
-      const { data:user, errors }  = this.state;
+    const { data: user, errors } = this.state;
     return (
-     <form onSubmit={this.handleLogin}>
-            {errors.global && (
-                <div className="alert alert-danger">{errors.global}</div>
-            )}
-        <div className="form-group">
+      <form onSubmit={this.handleLogin}>
+        <div className="col-lg-6 col-lg-offset-3 col-lg-offset-3">
+          {errors.global && (
+            <div className="alert alert-danger">{errors.global}</div>
+          )}
+          <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email"
-                onChange={this.handleStringChange}
-                value={user.email}
-                className={errors.mailError ? "form-control is-invalid" : "form-control"}
+            <input
+              type="email"
+              name="email"
+              id="email"
+              onChange={this.handleStringChange}
+              value={user.email}
+              className={
+                errors.mailError ? "form-control is-invalid" : "form-control"
+              }
             />
             <div className="invalid-feedback">{errors.mailError}</div>
-        </div> 
-        <div className="form-group">
+          </div>
+          <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="password"
-                onChange={this.handleStringChange}
-                value={user.password}
-                className={errors.passError ? "form-control is-invalid" : "form-control"}
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onChange={this.handleStringChange}
+              value={user.password}
+              className={
+                errors.passError ? "form-control is-invalid" : "form-control"
+              }
             />
             <div className="invalid-feedback">{errors.passError}</div>
-        </div>
-        <button type="submit" className="btn btn-primary btn-block">
+          </div>
+          <button type="submit" className="btn btn-primary btn-block">
             Login
-        </button>
-        <small className="form-text text-center">
-            <Link to="/register">Register</Link> if you do not have an account <br/>
-        </small>
-     </form>   
-    )
+          </button>
+          <small className="form-text text-center">
+            <Link to="/auth/register">Register</Link> if you do not have an
+            account <br />
+          </small>
+        </div>
+      </form>
+    );
   }
 }

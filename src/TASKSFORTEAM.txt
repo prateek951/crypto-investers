@@ -1,0 +1,4 @@
+{/* TD : Use Same Spinner Effect for our application logo 
+Just change the src binding here with the image that 
+we want as the logo. */}
+{/* TD :  Proper Designs to be implemented using Ant Framework Refer the documentation for that*/}

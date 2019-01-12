@@ -8,7 +8,7 @@ export default class Register extends Component {
       email: "",
       username: "",
       password: "",
-      confirmPassword : ""
+      confirmPassword: ""
     },
     errors: {}
   };
@@ -25,6 +25,7 @@ export default class Register extends Component {
       //reach out to server to register the user
       //axios async call
     }
+    this.setState({ errors: errors });
   };
   validate = data => {
     const errors = {};
@@ -34,7 +35,8 @@ export default class Register extends Component {
     if (!isEmail(data.email)) errors.emailError = "Invalid E-mail";
     if (!data.username) errors.usernameError = "Username cannot be blank";
     if (!data.password) errors.passwordError = "Password cannot be blank";
-    if(!data.confirmPassword) errors.confirmPasswordError = "Confirm Password cannot be blank";
+    if (!data.confirmPassword)
+      errors.confirmPasswordError = "Confirm Password cannot be blank";
     return errors;
   };
 
@@ -43,52 +45,77 @@ export default class Register extends Component {
     const { data: user, errors } = this.state;
     return (
       <form onSubmit={this.handleRegister}>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email"
-          onChange={this.handleStringChange}
-          value={user.email}
-          className={errors.emailError ? "form-control is-invalid" : "form-control"} />
-        </div>
-        <div className="invalid-feedback">{errors.emailError}</div>
-        
-        <div className="form-group">
+        <div className="col-lg-6 col-lg-offset-3">
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              onChange={this.handleStringChange}
+              value={user.email}
+              className={
+                errors.emailError ? "form-control is-invalid" : "form-control"
+              }
+            />
+            <div className="invalid-feedback">{errors.emailError}</div>
+          </div>
+
+          <div className="form-group">
             <label htmlFor="username">Username</label>
-            <input type="text" name="username" id="username"
-                onChange={this.handleStringChange}
-                value={user.username}
-                className={errors.usernameError ? "form-control is-invalid":"form-control"}
+            <input
+              type="text"
+              name="username"
+              id="username"
+              onChange={this.handleStringChange}
+              value={user.username}
+              className={
+                errors.usernameError ? "form-control is-invalid" : "form-control"
+              }
             />
             <div className="invalid-feedback">{errors.usernameError}</div>
-        </div>
-        
-        <div className="form-group">
+          </div>
+
+          <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="password"
-                onChange={this.handleStringChange}
-                value={user.password}
-                className={errors.passwordError ? "form-control is-invalid" : "form-control"}
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onChange={this.handleStringChange}
+              value={user.password}
+              className={
+                errors.passwordError ? "form-control is-invalid" : "form-control"
+              }
             />
             <div className="invalid-feedback">{errors.passwordError}</div>
-        </div>
+          </div>
 
-         <div className="form-group">
+          <div className="form-group">
             <label htmlFor="password">Confirm Password</label>
-            <input type="password" name="confirmPassword" id="confirmPassword"
-                onChange={this.handleStringChange}
-                value={user.confirmPassword}
-                className={errors.confirmPasswordError ? "form-control is-invalid" : "form-control"}
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              onChange={this.handleStringChange}
+              value={user.confirmPassword}
+              className={
+                errors.confirmPasswordError
+                  ? "form-control is-invalid"
+                  : "form-control"
+              }
             />
             <div className="invalid-feedback">{errors.confirmPasswordError}</div>
-        </div>
+          </div>
 
-        <button type="submit" className="btn btn-primary btn-block">
+          <button type="submit" className="btn btn-primary btn-block">
             Register
         </button>
-        
-        <small className="form-text text-center">
-            or <Link to="/login">Login</Link> if you have an account
+
+          <small className="form-text text-center">
+            or <Link to="/auth/login">Login</Link> if you have an account
         </small>
+        </div>
       </form>
     );
   }
