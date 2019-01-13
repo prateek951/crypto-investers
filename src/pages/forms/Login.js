@@ -74,7 +74,7 @@ export default class Login extends Component {
             Login
           </button>
           <small className="form-text text-center">
-            Already Registered? <Link to="/auth/login">Login</Link>
+            Dont have a account yet ? Register now <Link to="/auth/register">Login</Link>
           </small>
         </div>
       </form>
