@@ -1,13 +1,14 @@
 import React from "react";
 import { CryptoContext } from "../CryptoProvider";
 
-export default function ({name,children}) {
-    return <CryptoContext.Consumer>
-        { ({page}) => {
-            if(page !== name) {
+export default function(props) {
+    return <AppContext.Consumer>
+        {({page}) => {
+            if(page !== props.name) {
                 return null;
             }
-            return <div>{children}</div>
+            return <div>{props.children}</div>
         }}
-    </CryptoContext.Consumer>
+    </AppContext.Consumer>
 }
+
