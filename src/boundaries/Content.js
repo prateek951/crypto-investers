@@ -1,17 +1,13 @@
-import React from 'react';
-import { CryptoContext } from '../CryptoProvider';
-const Content = (props) => {
+import React from "react";
+import { CryptoContext } from "../CryptoProvider";
+
+export default function(props) {
     return <CryptoContext.Consumer>
-        {({coins,prices,first}) => {
+        {({coins}) => {
             if(!coins) {
-                return <div>Fetching the Coins..</div>
-            }
-            if(!first && !prices) {
-                return <div>Fetching the Prices</div>
+                return <div>Coins are being fetched...Please wait.</div>
             }
             return <div>{props.children}</div>
         }}
     </CryptoContext.Consumer>
-};
-
-export default Content;
+}
