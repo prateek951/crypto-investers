@@ -5,6 +5,7 @@ import CryptoProvider from "./CryptoProvider";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import Settings from "./components/Settings";
+import Content from "./boundaries/Content";
 // import Register from "./pages/forms/Register";
 // import Login from "./pages/forms/Login";
 // import Dashboard from "./pages/Dashboard";
@@ -15,8 +16,10 @@ class App extends Component {
       <div className="App">
         <Layout>
           <CryptoProvider>
-            <Navbar/>
-            <Settings/>
+            <Navbar />
+            <Content>
+              <Settings />
+            </Content>
           </CryptoProvider>
         </Layout>
       </div>
