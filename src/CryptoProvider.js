@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import * as _ from "lodash";
 
 const CRYPTO_COMPARE = require("cryptocompare");
+
+const maxFavs = 10;
+const timeUnits = 10;
 
 export const CryptoContext = React.createContext();
 
@@ -10,8 +14,13 @@ export default class CryptoProvider extends Component {
 
     this.state = {
       page: "dashboard",
+      first: false,
+      favorites: ["BTC", "ETH", "XMR", "DOGE"],
       ...this.savedSettings(),
       setPage: this.setPage,
+      addCoin: this.addCoin,
+      removeCoin: this.removeCoin,
+      isInFavorites: this.isInFavorites,
       addToFavorites: this.addToFavorites
     };
   }
@@ -22,7 +31,7 @@ export default class CryptoProvider extends Component {
   getCoins = async () => {
     let coinList = await CRYPTO_COMPARE.coinList();
     // console.log(coins);
-    let { Data : coins } = coinList;
+    let { Data: coins } = coinList;
     this.setState({ coins: coins });
   };
 
@@ -38,6 +47,21 @@ export default class CryptoProvider extends Component {
         test: "test"
       })
     );
+  };
+
+  addCoin = coinId => {
+    let favorites = this.state.favorites.slice();
+    if (favorites.length > maxFavs) return;
+    favorites.push(coinId);
+    this.setState({ favorites: favorites });
+  };
+
+  isInFavorites = coinId => _.includes(this.state.favorites, coinId);
+
+  removeCoin = coinId => {
+    let favorites = this.state.favorites.slice();
+    //use lodash remove a specific coin using coinId
+    this.setState({ favorites: _.pull(favorites, coinId) });
   };
 
   savedSettings = () => {
