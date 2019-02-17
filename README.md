@@ -1,5 +1,8 @@
 # Cryptocurrency Comparison and RealTime Visualization  
 
+![image](https://user-images.githubusercontent.com/31117403/52914165-21f63e00-32eb-11e9-8af2-7c4ae87b4c4b.png)
+
+
 ```
 FEATURES
 
