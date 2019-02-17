@@ -70,7 +70,9 @@ export default class Register extends Component {
               onChange={this.handleStringChange}
               value={user.username}
               className={
-                errors.usernameError ? "form-control is-invalid" : "form-control"
+                errors.usernameError
+                  ? "form-control is-invalid"
+                  : "form-control"
               }
             />
             <div className="invalid-feedback">{errors.usernameError}</div>
@@ -85,7 +87,9 @@ export default class Register extends Component {
               onChange={this.handleStringChange}
               value={user.password}
               className={
-                errors.passwordError ? "form-control is-invalid" : "form-control"
+                errors.passwordError
+                  ? "form-control is-invalid"
+                  : "form-control"
               }
             />
             <div className="invalid-feedback">{errors.passwordError}</div>
@@ -105,16 +109,18 @@ export default class Register extends Component {
                   : "form-control"
               }
             />
-            <div className="invalid-feedback">{errors.confirmPasswordError}</div>
+            <div className="invalid-feedback">
+              {errors.confirmPasswordError}
+            </div>
           </div>
 
           <button type="submit" className="btn btn-primary btn-block">
             Register
-        </button>
+          </button>
 
           <small className="form-text text-center">
             Already Registered? <Link to="/auth/login">Login</Link>
-        </small>
+          </small>
         </div>
       </form>
     );
