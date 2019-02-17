@@ -1,4 +1,10 @@
-{/* TD : Use Same Spinner Effect for our application logo 
-Just change the src binding here with the image that 
-we want as the logo. */}
-{/* TD :  Proper Designs to be implemented using Ant Framework Refer the documentation for that*/}
+TASKS 
+
+1. Add a loader for each page 
+It is showing just loading page for now. Simply replace the code 
+of Loading Prices or Loading Coins with a Spinner Component 
+2. Blockchain Implementation Ideas 
+3. Responsiveness if possible 
+4. Ant Design Cancelled, Stick to Styled Components for now 
+5. Please make any changes by making a pull request and not directly.
+Changes that have a positive outlook will be merged 
