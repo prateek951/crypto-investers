@@ -1,34 +1,35 @@
 {
-  "name": "ccoin-dashboard-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.2.1",
-    "cryptocompare": "^0.7.1",
-    "fuzzy": "^0.1.3",
-    "lodash": "^4.17.11",
-    "moment": "^2.24.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-highcharts": "^16.0.2",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.3",
-    "styled-components": "^4.1.3",
-    "validator": "^10.10.0"
-  },
+  "name": "compare-visualize-cryptos",
+  "version": "1.0.0",
+  "description": "![image](https://user-images.githubusercontent.com/31117403/52914165-21f63e00-32eb-11e9-8af2-7c4ae87b4c4b.png)",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateek951/compare-visualize-cryptos.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prateek951/compare-visualize-cryptos/issues"
+  },
+  "homepage": "https://github.com/prateek951/compare-visualize-cryptos#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.18",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.11.0"
+  }
 }
