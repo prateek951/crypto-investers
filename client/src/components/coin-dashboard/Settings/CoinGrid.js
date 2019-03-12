@@ -9,24 +9,22 @@ export const CoinGridStyled = styled.div`
   grid-gap: 15px; 
   margin-top: 40px; 
 `
-
 function getLowerSectionCoins(coinList, filteredCoins){
   return (filteredCoins && Object.keys(filteredCoins)) ||
     Object.keys(coinList).slice(0, 100)
 }
 
-function getCoinsToDisplay(coinList, topSection, favorites, filterCoins){
-  return topSection ? favorites : getLowerSectionCoins(coinList, filterCoins);
-}
+const getCoinsToDisplay = (coinList, topSection, favorites, filterCoins) => {topSection ? favorites : getLowerSectionCoins(coinList, filterCoins);}
 
 export default function ({topSection}){
+
   return (
     <CryptoContext.Consumer>
     {({coinList, favorites, filteredCoins}) => (
       <CoinGridStyled>
-        {getCoinsToDisplay(coinList, topSection, favorites, filteredCoins).map(coinKey =>
-            <CoinTile coinKey={coinKey} key={coinKey} topSection={topSection}/>
-        )}
+        { getCoinsToDisplay(coinList, topSection, favorites, filteredCoins).map(coinKey =>
+            <CoinTile coinKey={coinKey} key={coinKey} topSection={topSection}/>)
+        }
       </CoinGridStyled>
     )}
   </CryptoContext.Consumer>

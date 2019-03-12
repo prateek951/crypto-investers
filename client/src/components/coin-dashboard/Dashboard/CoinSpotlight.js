@@ -13,7 +13,7 @@ export default function() {
     <CryptoContext.Consumer>
       {({coinList, currentFavorite}) =>
         <Tile>
-          <SpotLightName>{coinList[currentFavorite].CoinName}</SpotLightName>
+          <SpotLightName>{ coinList[currentFavorite] ? coinList[currentFavorite].CoinName: "No coins to show" }</SpotLightName>
           <CoinImage coin={coinList[currentFavorite]} spotlight/>
         </Tile>
       }

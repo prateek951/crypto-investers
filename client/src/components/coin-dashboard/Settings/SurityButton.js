@@ -26,7 +26,7 @@ export default function() {
       {({onAgreeFavorites}) => 
         <CenterDiv>
           <SurityButtonStyled onClick={onAgreeFavorites}>
-              Add TO Favorites
+              Check Visualization of Coin
           </SurityButtonStyled>
         </CenterDiv>
       }

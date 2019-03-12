@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://localhost:27017/crypto-compare",
+  mongoURI: "mongodb://localhost:27017/cypto-compare",
   secretOrKey: "123"
 };

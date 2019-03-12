@@ -86,18 +86,22 @@ export class CryptoProvider extends Component {
   prices = async () => {
     let responseData = [];
     //fetch prices for all the favorites
-    for (let i = 0; i < this.state.favorites.length; i++) {
-      try {
-        let priceData = await CRYPTO_COMPARE.priceFull(
-          this.state.favorites[i],
-          "USD"
-        );
-        // console.log(priceData);
-        responseData.push(priceData);
-      } catch (error) {
-        // throw new Error(error);
-        // console.log(error);
-        console.warn(`Error while fetching the prices ${error}`);
+    if (typeof this.state.favorites !== undefined){
+      for (let i = 0; i < this.state.favorites.length; i++) {
+        console.log("respones in undefined");
+  
+        try {
+          let priceData = await CRYPTO_COMPARE.priceFull(
+            this.state.favorites[i],
+            "USD"
+          );
+          // console.log(priceData);
+          responseData.push(priceData);
+        } catch (error) {
+          // throw new Error(error);
+          // console.log(error);
+          console.warn(`Error while fetching the prices ${error}`);
+        }
       }
     }
     return responseData;

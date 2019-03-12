@@ -1,7 +1,7 @@
 {
-  "name": "compare-visualize-cryptos",
+  "name": "crypto-investors",
   "version": "1.0.0",
-  "description": "![image](https://user-images.githubusercontent.com/31117403/52914165-21f63e00-32eb-11e9-8af2-7c4ae87b4c4b.png)",
+  "description": "CryptoInvesters",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -10,26 +10,21 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prateek951/compare-visualize-cryptos.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prateek951/compare-visualize-cryptos/issues"
-  },
-  "homepage": "https://github.com/prateek951/compare-visualize-cryptos#readme",
+  "author": "Prateek Madaan",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "concurrently": "^4.1.0",
-    "express": "^4.16.4",
-    "gravatar": "^1.8.0",
-    "jsonwebtoken": "^8.5.0",
-    "mongoose": "^5.4.18",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "gravatar": "^1.6.0",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.12",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^10.11.0"
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
   }
 }
