@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {CryptoContext} from "../App/CryptoProvider";
 import CoinTile from "./CoinTile";
+import getCoinsToDisplay from './GetCoins2Display';
 
 export const CoinGridStyled = styled.div`
   display: grid;   
@@ -9,12 +10,10 @@ export const CoinGridStyled = styled.div`
   grid-gap: 15px; 
   margin-top: 40px; 
 `
-function getLowerSectionCoins(coinList, filteredCoins){
-  return (filteredCoins && Object.keys(filteredCoins)) ||
-    Object.keys(coinList).slice(0, 100)
-}
-
-const getCoinsToDisplay = (coinList, topSection, favorites, filterCoins) => {topSection ? favorites : getLowerSectionCoins(coinList, filterCoins);}
+  function getLowerSectionCoins(coinList, filteredCoins){
+    return (filteredCoins && Object.keys(filteredCoins)) ||
+      Object.keys(coinList).slice(0, 100)
+  }
 
 export default function ({topSection}){
 
