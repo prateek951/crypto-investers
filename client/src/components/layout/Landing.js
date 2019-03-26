@@ -19,7 +19,7 @@ class Landing extends Component {
             <div className="row">
               <div className="parent col-md-12 text-center">
                 <h1 id="crypto__title"className="display-3 mb-4">
-                  <span class="large__heading__shine">Crypto</span>Investors</h1>
+                  <span className="large__heading__shine">Crypto</span>Investors</h1>
                 <h3 className="white">
                   {' '}
                   Cryptocurrency based blockchain system for understanding 
