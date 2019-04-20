@@ -4,7 +4,7 @@ img {
 
 .landing {
   position: relative;
-  background: url("./img/crypto.jpg") no-repeat;
+  background: url("./img/bg-masthead.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 170vh;
@@ -53,7 +53,7 @@ h3.white {
   font-size: 22px;
 }
 .profile-bg { 
-  background: url("https://media-prod.ii.co.uk/s3fs-public/2019-01/crypto%20currency.jpg") no-repeat center center/cover;
+  background: url("https://ki.se/sites/default/files/styles/adaptive/public/2018/10/19/istock_host_autumn_fall_water.jpg?itok=j4g1ciLW") no-repeat center center/cover;
 }
 .card-form {
   opacity: 0.9;

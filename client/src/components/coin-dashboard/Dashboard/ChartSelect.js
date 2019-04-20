@@ -4,7 +4,7 @@ import {backgroundColor2, fontSize2} from '../Shared/Styles';
 export default styled.select`
   ${backgroundColor2}
   ${fontSize2}
-  color: white;
+  color: black;
   border: 1px solid;
   float: right;
 `;

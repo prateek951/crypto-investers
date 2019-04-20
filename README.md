@@ -24,4 +24,7 @@ React Context API
 Lodash 
 Styled Components 
 react-highcharts
+Node.js
+Express.js
+MongoDB 
 ```

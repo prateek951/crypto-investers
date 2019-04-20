@@ -48,12 +48,12 @@ class Navbar extends Component {
             aria-labelledby="navbarDropdownMenuLink-4"
           >
             <li className="nav-item dropdown-item">
-              <NavLink className="nav-link" to="/dashboard">
+              <NavLink style={{color: 'black'}} className="nav-link" to="/dashboard">
                 Dashboard
               </NavLink>
             </li>
             <li className="nav-item dropdown-item">
-              <a onClick={this.onLogoutClick.bind(this)} className="nav-link">
+              <a style={{color: 'black'}} onClick={this.onLogoutClick.bind(this)} className="nav-link">
                 <img
                   className="rounded-circle"
                   src={user.avatar}

@@ -3,9 +3,10 @@ import styled, { css } from "styled-components";
 import { CryptoContext } from "./CryptoProvider";
 //Style the Logo
 const Logo = styled.div`
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 4px;
+  margin-right: 20px;
 `;
 //Style the bar
 const Bar = styled.div`
@@ -16,6 +17,7 @@ const Bar = styled.div`
 //Style the button element
 const ButtonElement = styled.div`
   cursor: pointer;
+  font-size: 1em;
   ${props =>
     props.active &&
     css`
