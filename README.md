@@ -16,6 +16,7 @@
  
  Styling using Styled Components
  
+ Adds user registration and entire profile data on the multichain based private blockchain by using the concept of general data storage  using Streams
 ```
 
 ## SETUP AND GETTING A COPY OF THE PROJECT RUNNING ON YOUR LOCAL MACHINE 
