@@ -29,14 +29,18 @@ router.post("/register", async (req, res) => {
 
   try {
     // commit to the blockchain
-    console.log("creating users on the blockchain");
-    console.log(
-      await multichain.create({
-        type: "stream",
-        name: "users",
-        open: true
-      })
-    );
+    console.log("Creating User on the Multichain Before Storing to the database");
+    const streamList = await multichain.listStreams();
+    if(streamList.length === 1) { 
+      console.log('creating users streams');
+      console.log(
+        await multichain.create({
+          type: "stream",
+          name: "users",
+          open: true
+        })
+      );
+    }
   } catch (error) {
     console.log(error);
   }

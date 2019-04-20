@@ -12,7 +12,7 @@ const appRoutes = require("./utils/appRoutes");
 const app = express();
 
 //Body parser middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 //DB Config
