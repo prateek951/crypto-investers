@@ -10,7 +10,10 @@ async function init() {
       info: await multichain.getInfo(),
       streams: await multichain.listStreams(),
       userKeys: await multichain.listStreamKeys({ stream: "users" }),
-      profileKeys: await multichain.listStreamKeys({ stream: "profiles" })
+      experienceKeys: await multichain.listStreamKeys({
+        stream: "experiences"
+      }),
+      educationKeys: await multichain.listStreamKeys({ stream: "education" })
     };
     console.log("\nChain info:");
     console.log(data.info);
@@ -20,9 +23,12 @@ async function init() {
     // Keys for the users
     console.log("\nUser Keys:");
     console.log(data.userKeys);
-    // Keys for the profiles
-    console.log("\nProfile Keys:");
-    console.log(data.profileKeys);
+    // Keys for the profile experiences
+    console.log("\nExperience Keys:");
+    console.log(data.experienceKeys);
+    // Keys for the profile education data
+    console.log("\nEducation Keys:");
+    console.log(data.educationKeys);
   } catch (err) {
     console.log(err);
   }
