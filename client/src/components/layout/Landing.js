@@ -24,7 +24,7 @@ class Landing extends Component {
                   {' '}
                   Cryptocurrency based blockchain system for understanding 
                   the market trends of the cryptocurrencies based on day,
-                  week and month. 
+                  week and month. We manage the invester data on Multichain Based Private Blockchain.
                 </h3>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-dark mr-2">

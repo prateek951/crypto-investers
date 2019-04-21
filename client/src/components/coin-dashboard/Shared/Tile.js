@@ -10,7 +10,6 @@ import {
   lightBlueBackground,
   greenBoxShadow,
   redBoxShadow,
-  backgroundColor2
 } from "./Styles";
 
 

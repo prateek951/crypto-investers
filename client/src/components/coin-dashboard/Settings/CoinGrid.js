@@ -10,10 +10,10 @@ export const CoinGridStyled = styled.div`
   grid-gap: 15px; 
   margin-top: 40px; 
 `
-  function getLowerSectionCoins(coinList, filteredCoins){
-    return (filteredCoins && Object.keys(filteredCoins)) ||
-      Object.keys(coinList).slice(0, 100)
-  }
+  // function getLowerSectionCoins(coinList, filteredCoins){
+  //   return (filteredCoins && Object.keys(filteredCoins)) ||
+  //     Object.keys(coinList).slice(0, 100)
+  // }
 
 export default function ({topSection}){
 

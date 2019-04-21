@@ -21,7 +21,7 @@ const Info = styled.div`
 `
 
 const comparator = (prices) => {
-  if(prices.length!=0) {
+  if(prices.length!==0) {
 
   let maxCoin = prices.reduce((accumulator, price) => {
     let t = Object.keys(price)[0];
@@ -31,7 +31,7 @@ const comparator = (prices) => {
                 name: price[t]["USD"].FROMSYMBOL
                 };
 
-    if((coin.value>accumulator.value) || Object.keys(accumulator).length==0){
+    if((coin.value>accumulator.value) || Object.keys(accumulator).length === 0){
       return accumulator = coin;
     }
     return accumulator;

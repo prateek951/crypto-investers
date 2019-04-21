@@ -1,8 +1,10 @@
+/**
+ * @author Prateek Madaan 
+ * @desc Run this file to get the information regarding the data that is stored onto the multichain blockchain
+ */
+
 const multichainOptions = require("./utils/multichainOptions");
 const multichain = require("multichain-node")(multichainOptions);
-
-// const StrToHex = (string => Buffer.from(string, 'utf8').toString('hex'));
-// const HexToStr = (hex => Buffer.from(hex, 'hex').toString('utf8'));
 
 async function init() {
   try {
