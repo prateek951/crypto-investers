@@ -1,10 +1,14 @@
 TASKS 
 
-1. Add a loader for each page 
-It is showing just loading page for now. Simply replace the code 
-of Loading Prices or Loading Coins with a Spinner Component 
-2. Blockchain Implementation Ideas 
-3. Responsiveness if possible 
-4. Ant Design Cancelled, Stick to Styled Components for now 
-5. Please make any changes by making a pull request and not directly.
+1. Blockchain Implementation Ideas 
+2. Responsiveness if possible 
+3. Ant Design Cancelled, Stick to Styled Components for now 
+4. Please make any changes by making a pull request and not directly.
 Changes that have a positive outlook will be merged 
+
+TASKS ACCOMPLISHED (FINAL)  23/05/19
+
+1 [COMPLETED]
+2 [ALMOST]
+3 [Went with Bootstrap - COMPLETED]
+4 [COMPLETED]
